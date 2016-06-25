@@ -1,0 +1,17 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <pattern>LOAD AIML B</pattern>
+        <template>
+            <learn>basic_chat.aiml</learn>
+            <learn>bot.aiml</learn>
+            <learn>bot_profile.aiml</learn>
+        </template>   
+    </category>
+    <category>
+        <pattern>RELOAD</pattern>
+        	<template>	
+         	   <learn>basic_chat.aiml</learn>
+        	</template>
+    </category>  
+
+</aiml>

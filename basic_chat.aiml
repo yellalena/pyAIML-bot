@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+<!-- welcoming -->
+    <category>
+        <pattern>HELLO </pattern>
+        <template>
+        <random>
+            <li>Well, hello!</li>
+            <li>Hello ????</li>
+            <li>Whos that ? <think><set name="topic">meeting</set></think></li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO * </pattern>
+        <template>
+            <random>
+            <li><srai>HELLO</srai></li>
+            <li>Who said I'm <star/>?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <srai>hello</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI *</pattern>
+        <template>
+            <srai>hello</srai>
+        </template>
+    </category>
+<!-- meeting -->
+
+    <topic name="MEETING">
+    <category>
+        <pattern>IM *</pattern>
+        <that>WHOS THAT</that>
+        <template>
+            Oh, hi <set name="username"><star/></set>!
+        </template>
+    </category>
+    <category> 
+        <pattern>*</pattern>
+        <that>WHOS THAT</that>
+        <template>
+            <srai>IM <star/></srai>
+        </template>
+    </category>
+
+    </topic>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAY MY NAME</pattern>
+        <template>
+            You're <get name="username"/>
+        </template>
+    </category>
+
+
+
+<!-- talking -->
+    <category>
+        <pattern>LETS TALK</pattern>
+        <template>
+            What do you want to <set name="topic">talk</set> about ?
+        </template>
+    </category>
+
+    <topic name="TALK">
+    <category>
+        <pattern>CATS</pattern>
+        <template>
+            <think><set name="topic">cats</set></think>
+            <srai>kitties</srai>
+        </template>
+    </category>
+    </topic>
+ 
+ <!-- topics -->   
+
+ <!-- CAT TALKS -->
+    <topic name="CATS">
+    <category>
+        <pattern>KITTIES</pattern>
+        <template>
+            <random>
+            <li>What kind of cat do you have ?</li>
+            <li>Why would you prefer a cat over a dog ?</li>
+            <li>Tell me something about your cat</li>
+            <li>What is the best thing about being a cat ?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I HAVE * </pattern>
+        <that>WHAT KIND OF CAT DO YOU HAVE</that>
+        <template>Oh wow! Cute :3</template>
+    </category>
+
+    <category>
+        <pattern>BECAUSE</pattern>      
+        <that>WHY WOULD YOU PREFER A CAT OVER A DOG</that>
+        <template>Oh! I see. That's a nice point. </template>
+
+    </category>
+
+    <category>
+        <pattern>BECAUSE *</pattern>
+        <that>WHY WOULD YOU PREFER A CAT OVER A DOG</that>
+        <template><srai>because</srai></template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>TELL ME SOMETHING ABOUT YOUR CAT</that>
+        <template>Awww. I'd love to have a cat like this.</template>
+    </category>
+
+    <category>    
+        <pattern>I THINK *</pattern>
+        <that>WHAT IS THE BEST THING ABOUT BEING A CAT</that>
+        <template>Well, maybe you're right. I wish I could be a cat :( </template>
+    </category>
+
+    </topic>
+<!-- end of cat talks -->
+
+    <topic name="default">
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Sorry I don't know how to react.
+        </template>
+    </category>
+    </topic>
+</aiml>

@@ -199,8 +199,8 @@
             <template>
                 <think><set name="COUNT"><star/></set></think>
                 <condition name="COUNT">
-                    <li value="one">Nice.</li>
-                    <li value="zero">Ha-ha. Me too.</li>
+                    <li value="1">Nice.</li>
+                    <li value="0">Ha-ha. Me too.</li>
                     <li>Oh thats a lot!</li>
                 </condition>
                 <think><set name="topic">cats</set></think>

@@ -48,7 +48,7 @@
         <template>
             <think><set name="topic">howareyou</set></think>
             <random>
-                <li>I'm good. What about you?</li>
+                <li>I am good. What about you?</li>
                 <li>Not really awesome. You?</li>
                 <li>Shut up!</li>
             </random>

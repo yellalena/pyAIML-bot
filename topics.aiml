@@ -128,10 +128,18 @@
                 Do you really think I have a cat? Really?
             </template>
         </category>
+        
         <category>
             <pattern>YES</pattern>
             <template>
                 UGH. I am a bot !
+            </template>
+        </category>
+
+        <category>
+        <pattern>YEAH</pattern>
+            <template>
+                <srai>yes</srai>
             </template>
         </category>
 

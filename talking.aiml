@@ -2,7 +2,7 @@
 <aiml version="1.0.1" encoding="UTF-8">
 <!-- talking -->
     <category>
-        <pattern>LETS TALK</pattern>
+        <pattern>I WANT TO TALK</pattern>
         <template>
             What do you want to <set name="topic">talk</set> about ?
         </template>

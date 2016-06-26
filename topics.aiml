@@ -29,7 +29,7 @@
         <pattern>BECAUSE</pattern>      
         <that>WHY WOULD YOU PREFER A CAT OVER A DOG</that>
         <template>
-            Oh! I see. That's a nice point. Though I like dogs better
+            Oh! I see. Thats a nice point. Though I like dogs better
             <think><set name="topic">catsvsdogs</set></think>
         </template>
 
@@ -52,7 +52,7 @@
         <pattern>*</pattern>
         <that>TELL ME SOMETHING ABOUT YOUR CAT</that>
         <template>
-            Awww. I'd love to have a cat like this. How many cats do you have ?
+            Awww. I would love to have a cat like this. How many cats do you have ?
             <think><set name="topic">userscat</set></think>
         </template>
     </category>
@@ -61,7 +61,7 @@
         <pattern>*</pattern>
         <that>WHAT IS THE BEST THING ABOUT BEING A CAT </that>
         <template>
-            Well, maybe you're right. I wish I could be a cat :( What would you do first if you turned into a cat ? 
+            Well, maybe you are right. I wish I could be a cat :( What would you do first if you turned into a cat ? 
             <think><set name="topic">ifyouwereacat</set></think>
         </template>
     </category>
@@ -81,7 +81,7 @@
         <pattern>BECAUSE</pattern>      
         <that>_ WHY WOULD YOU PREFER A CAT OVER A DOG</that>
         <template>
-            Oh! I see. That's a nice point. Though I like dogs better
+            Oh! I see. Thats a nice point. Though I like dogs better
             <think><set name="topic">catsvsdogs</set></think>
         </template>
     </category>
@@ -102,7 +102,7 @@
         <pattern>*</pattern>
         <that>_ TELL ME SOMETHING ABOUT YOUR CAT</that>
         <template>
-            Awww. I'd love to have a cat like this. How many cats do you have ?
+            Awww. I would love to have a cat like this. How many cats do you have ?
             <think><set name="topic">userscat</set></think>
         </template>
     </category>
@@ -111,7 +111,7 @@
         <pattern>*</pattern>
         <that>_ WHAT IS THE BEST THING ABOUT BEING A CAT </that>
         <template>
-            Well, maybe you're right. I wish I could be a cat :( What would you do first if you turned into a cat ? 
+            Well, maybe you are right. I wish I could be a cat :( What would you do first if you turned into a cat ? 
             <think><set name="topic">ifyouwereacat</set></think>
         </template>
     </category>
@@ -138,7 +138,7 @@
         <category>
             <pattern>NO</pattern>
             <template>
-                I'm a bot! why would you ask ?
+                I am a bot! why would you ask ?
             </template>
         </category>
 

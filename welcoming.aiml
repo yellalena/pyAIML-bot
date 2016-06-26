@@ -17,7 +17,7 @@
         <template>
             <random>
             <li><srai>HELLO</srai></li>
-            <li>Who said I'm <star/>?</li>
+            <li>Who said I am <star/>?</li>
             </random>
         </template>
     </category>
@@ -54,6 +54,13 @@
             </random>
         </template>
     </category>
+    <category>
+        <pattern>SUP</pattern>
+        <template>
+            <srai>how are you</srai>
+        </template>
+    </category>
+
 
     <topic name="HOWAREYOU">
         <category>
@@ -62,7 +69,7 @@
                 <think><set name="MOOD"><star/></set></think>
                 <condition name="MOOD">
                     <li value="good">Nice to hear that!</li>
-                    <li value="bad">It's gonna be ok, dude..</li>
+                    <li value="bad">Its gonna be ok, dude..</li>
                     <li>Ugh...</li>
                 </condition>
                 <think><set name="topic"></set></think>

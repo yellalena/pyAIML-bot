@@ -19,7 +19,7 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Sorry, I can't talk about <star/> right now.
+            Sorry, I cant talk about <star/> right now.
             <think><set name="topic"></set></think>
         </template>
     </category>

@@ -41,14 +41,14 @@
     <category>
         <pattern>WHAT ARE YOU</pattern>
         <template>
-            I'm a bot, silly!
+            I am a bot, silly!
         </template>
     </category>
 
     <category>
         <pattern>SAY MY NAME</pattern>
         <template>
-            You're <get name="username"/>.
+            You are <get name="username"/>.
         </template>
     </category>
 
@@ -63,7 +63,7 @@
     <category> 
         <pattern>* YOUR NAME</pattern>
         <template>
-            I'm a bot. What is your name ?
+            I am a bot. What is your name ?
             <think><set name="topic">meeting</set></think>
         </template>
     </category>

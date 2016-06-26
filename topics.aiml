@@ -1,144 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0.1" encoding="UTF-8">
-<!-- basic_chat.aiml -->
-
-<!-- welcoming -->
-    <category>
-        <pattern>HELLO </pattern>
-        <template>
-        <random>
-            <li>Well, hello!</li>
-            <li>Hello ????</li>
-            <li>Whos that ? <think><set name="topic">meeting</set></think></li>
-        </random>
-        </template>
-    </category>
-
-    <category>
-        <pattern>HELLO * </pattern>
-        <template>
-            <random>
-            <li><srai>HELLO</srai></li>
-            <li>Who said I'm <star/>?</li>
-            </random>
-        </template>
-    </category>
-
-    <category>
-        <pattern>HI</pattern>
-        <template>
-            <srai>hello</srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>HI *</pattern>
-        <template>
-            <srai>hello</srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>HOW ARE YOU</pattern>
-        <template>
-            <think><set name="topic">howareyou</set></think>
-            <random>
-                <li>I'm good. What about you?</li>
-                <li>Not really awesome. You?</li>
-                <li>Shut up!</li>
-            </random>
-        </template>
-    </category>
-
-    <topic name="HOWAREYOU">
-        <category>
-            <pattern>I AM *</pattern>
-            <template>
-                <think><set name="MOOD"><star/></set></think>
-                <condition name="MOOD">
-                    <li value="good">Nice to hear that!</li>
-                    <li value="bad">It's gonna be ok, dude..</li>
-                    <li>Ugh...</li>
-                </condition>
-                <think><set name="topic"></set></think>
-            </template>
-        </category>
-        <category>
-            <pattern>I FEEL *</pattern>
-            <template>
-                <srai>I AM <star/></srai>
-            </template>
-        </category>
-    </topic>
-<!-- meeting -->
-
-    <topic name="MEETING">
-    <category>
-        <pattern>IM *</pattern>
-        <that>WHOS THAT</that>
-        <template>
-            Oh, hi <set name="username"><star/></set>!
-        </template>
-    </category>
-    <category> 
-        <pattern>*</pattern>
-        <that>WHOS THAT</that>
-        <template>
-            <srai>IM <star/></srai>
-        </template>
-    </category>
-
-    </topic>
-
-    <category>
-        <pattern>WHAT ARE YOU</pattern>
-        <template>
-            I'm a bot, silly!
-        </template>
-    </category>
-
-    <category>
-        <pattern>SAY MY NAME</pattern>
-        <template>
-            You're <get name="username"/>.
-        </template>
-    </category>
-
-    <category>
-        <pattern>* SAY MY NAME</pattern>
-        <template>
-            <srai>say my name</srai>
-        </template>
-    </category>
-
-
-
-<!-- talking -->
-    <category>
-        <pattern>LETS TALK</pattern>
-        <template>
-            What do you want to <set name="topic">talk</set> about ?
-        </template>
-    </category>
-
-    <topic name="TALK">
-    <category>
-        <pattern>CATS</pattern>
-        <template>
-            <think><set name="topic">cats</set></think>
-            <srai>kitties</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>*</pattern>
-        <template>
-            Sorry, I can't talk about <star/> right now.
-            <think><set name="topic"></set></think>
-        </template>
-    </category>
-    </topic>
- 
- <!-- topics -->   
+<!-- topics -->   
 
  <!-- CAT TALKS -->
     <topic name="CATS">
@@ -232,7 +94,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHY WOULD YOU PREFER A CAT OVER A DOG</that>
+        <that>_ WHY WOULD YOU PREFER A CAT OVER A DOG</that>
         <template><srai>because</srai></template>
     </category>
 
@@ -359,27 +221,4 @@
         </category>
     </topic>
 <!-- end of cat talks -->
-
-<!--    <topic name="DEFAULT"> -->
-    <category>
-        <pattern>* RULES</pattern>
-        <template>
-            Извините,  я не пишу в <star/>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <template>
-            Извините, я у бабушки.
-        </template>
-    </category>
-
-    <category>
-        <pattern>LOL</pattern>
-        <template>
-            It's not even funny.
-        </template>
-    </category>
-<!--    </topic> -->
 </aiml>

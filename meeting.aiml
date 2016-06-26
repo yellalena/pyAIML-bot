@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- meeting -->
+
+    <topic name="MEETING">
+    <category>
+        <pattern>IM *</pattern>
+        <that>WHOS THAT</that>
+        <template>
+            Oh, hi <set name="username"><star/></set>!
+        </template>
+    </category>
+    <category> 
+        <pattern>*</pattern>
+        <that>WHOS THAT</that>
+        <template>
+            <srai>IM <star/></srai>
+        </template>
+    </category>
+
+    </topic>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAY MY NAME</pattern>
+        <template>
+            You're <get name="username"/>.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SAY MY NAME</pattern>
+        <template>
+            <srai>say my name</srai>
+        </template>
+    </category>
+</aiml>

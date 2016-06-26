@@ -2,6 +2,7 @@
     <category>
         <pattern>LOAD AIML B</pattern>
         <template>
+        	<think><set name="username">username</set></think>
             <!--<learn>basic_chat.aiml</learn>
             <learn>bot.aiml</learn>
             <learn>bot_profile.aiml</learn>-->
@@ -10,6 +11,7 @@
             <learn>talking.aiml</learn>
             <learn>topics.aiml</learn>
             <learn>default.aiml</learn>
+			<learn>goodbyes.aiml</learn>
         </template>   
     </category>
     <category>
@@ -21,6 +23,7 @@
 	            <learn>talking.aiml</learn>
 	            <learn>topics.aiml</learn>
 	            <learn>default.aiml</learn>
+	            <learn>goodbyes.aiml</learn>
         	</template>
     </category>  
 

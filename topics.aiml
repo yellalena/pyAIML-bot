@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml version="1.0.1" encoding="UTF-8">
+<aiml encoding="UTF-8" version="1.0.1" >
 <!-- topics -->   
 
  <!-- CAT TALKS -->
@@ -186,6 +186,14 @@
             <that>_ THOUGH I LIKE DOGS BETTER </that>
             <template>
                 <srai>why</srai>
+            </template>
+        </category>
+        <pattern>*</pattern>
+            <that>_ THOUGH I LIKE DOGS BETTER </that>
+            <template>
+                Well I don't care.
+                <think><set name="topic">cats</set></think>
+                <srai>kitties</srai>
             </template>
         </category>
 

@@ -72,25 +72,6 @@ def srai(theTopic):
 	return srai
 
 def makeitThat(string):
-    if (string[-1] == '?' or string[-1] == '!'):  #KOSTYL: @TODO: regexp?
-        string = string[:-1]
-    that = ''
-    cut = 0
-    for l in string[::-1]:
-        if (l != '.' and l != '!' and l != '('):
-        	that += l
-        else:
-        	cut+=1
-        	break
-
-    if cut == 0:
-    	that = string.upper()
-    else:
-    	that = ' _ ' + that[::-1].upper()
-
-    return that
-
-def makeitThat2(string):
 	if (string[-1] == '?'):
 		string = string[:-1]
 	p = re.compile('[a-z]| ', re.IGNORECASE)
@@ -176,14 +157,14 @@ def generatefile(theTopic):
 	r3 = 'Well, maybe you are right. I wish I could be a %s :( What would you do first if you turned into a %s ?' % (theTopic, theTopic) 
 	#r4 = 'Not bad. Are you also interested in ANOTHERTOPIC ?' # ????????????
 
-	c1 = createCategory(['*'], [r1], makeitThat2(q1), 'kindof')
-	c2 = createCategory(['*'], [r2], makeitThat2(q2), 'userhas')
-	c3 = createCategory(['*'], [r3], makeitThat2(q3), 'ifyouwere')
+	c1 = createCategory(['*'], [r1], makeitThat(q1), 'kindof')
+	c2 = createCategory(['*'], [r2], makeitThat(q2), 'userhas')
+	c3 = createCategory(['*'], [r3], makeitThat(q3), 'ifyouwere')
 
 	# kostylee :3
-	c11 = createCategory(['*'], [r1], '_ ' + makeitThat2(q1), 'kindof')
-	c21 = createCategory(['*'], [r2], '_ ' + makeitThat2(q2), 'userhas')
-	c31 = createCategory(['*'], [r3], '_ ' + makeitThat2(q3), 'ifyouwere')
+	c11 = createCategory(['*'], [r1], '_ ' + makeitThat(q1), 'kindof')
+	c21 = createCategory(['*'], [r2], '_ ' + makeitThat(q2), 'userhas')
+	c31 = createCategory(['*'], [r3], '_ ' + makeitThat(q3), 'ifyouwere')
 	#c4 = createCategory([' * BEEN * '], r4, q4.upper()) # !! 
 
 	mainTopic = createTopic(theTopic.upper(), [c0, c1, c2, c3, c11, c21, c31])
@@ -192,7 +173,7 @@ def generatefile(theTopic):
 
 	subtopicsCats = []
 
-	kindofCategory = createCategory(['*'], ['You are right. How did you know that?'], makeitThat2(r1), 'GODDAMN'+theTopic)
+	kindofCategory = createCategory(['*'], ['You are right. How did you know that?'], makeitThat(r1), 'GODDAMN'+theTopic)
 	kindof = createTopic('KINDOF', [kindofCategory])
 
 
@@ -201,23 +182,23 @@ def generatefile(theTopic):
 	userhasPatterns11 = ['YES', 'I DO', 'YEAH', 'YEP', ' * YES * ', ' * I DO * ', ' * YEAH *', ' * YEP * ', ' * YES', ' * I DO', ' * YEAH', ' * YEP', 'YES * ', 'I DO * ', 'YEAH *', 'YEP * '] # sorry mom
 	userhasPatterns1 = [' * YES * ']
 	for c in userhasPatterns11:
-		subtopicsCats.append(createCategory([c], ['How lucky you are! I wish I had that too.'], makeitThat2(r2), 'GODDAMN'+theTopic))
+		subtopicsCats.append(createCategory([c], ['How lucky you are! I wish I had that too.'], makeitThat(r2), 'GODDAMN'+theTopic))
 
 	userhasPatterns22 = ['NO', 'NOPE', ' * NO * ', ' * NOPE * ', 'NO * ', 'NOPE * ', ' * NO', ' * NOPE'] # eboochiye kostylee! i will change this shit..someday
 	userhasPatterns2 = [' * NO * ']
 	for c in userhasPatterns22:
-		subtopicsCats.append(createCategory([c], ['Oh poor, I do.'], makeitThat2(r2), 'GODDAMN'+theTopic))
+		subtopicsCats.append(createCategory([c], ['Oh poor, I do.'], makeitThat(r2), 'GODDAMN'+theTopic))
 	
 
 	userhasPatterns33 = ['MAYBE', 'MIGHT', ' * MAYBE * ', ' * MIGHT * ', 'MAYBE * ', 'MIGHT * ', ' * MAYBE', ' * MIGHT']
 	userhasPatterns3 = [' * MAYBE * ']
 	for c in userhasPatterns33:
-		subtopicsCats.append(createCategory([c], ['Well that is OK! Tell me more about things like this.'], makeitThat2(r2), 'GODDAMN'+theTopic))
+		subtopicsCats.append(createCategory([c], ['Well that is OK! Tell me more about things like this.'], makeitThat(r2), 'GODDAMN'+theTopic))
 
 	userhas = createTopic('USERHAS', subtopicsCats)
 
 
-	ifyouwereCatefory = createCategory(['*'], ['...blah blah ... :)'], makeitThat2(r3), 'GODDAMN'+theTopic)
+	ifyouwereCatefory = createCategory(['*'], ['...blah blah ... :)'], makeitThat(r3), 'GODDAMN'+theTopic)
 	ifyouwere = createTopic('IFYOUWERE', [ifyouwereCatefory])
 
 

@@ -188,6 +188,8 @@
                 <srai>why</srai>
             </template>
         </category>
+        
+        <category>
         <pattern>*</pattern>
             <that>_ THOUGH I LIKE DOGS BETTER </that>
             <template>
